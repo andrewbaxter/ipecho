@@ -1,0 +1,26 @@
+[package]
+name = "ipecho"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lambda_http = { version = "0.8.0", default-features = false, features = [
+    "apigw_http",
+] }
+lambda_runtime = "0.8.0"
+tokio = { version = "1", features = ["macros"] }
+tracing = { version = "0.1", features = ["log"] }
+tracing-subscriber = { version = "0.3", default-features = false, features = [
+    "fmt",
+] }
+
+[build-dependencies]
+serde_json = "1.0.96"
+terrars = "0.1.5"
+terrars-andrewbaxter-localrun = { version = "0.1.13", features = ["data_run"] }
+terrars-hashicorp-aws = { version = "0.1.9", features = [
+    "iam_role",
+    "lambda_function",
+    "lambda_function_url",
+    "cloudwatch_log_group",
+] }
