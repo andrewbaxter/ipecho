@@ -1,4 +1,4 @@
-This is a simple service for AWS Lambda for echoing your IP address back to you (a la <whatismyip.com>).
+This is a simple service for AWS Lambda for echoing your IP address back to you (a la <https://whatismyip.com>).
 
 It's deployed with Terraform - all you need is AWS keys and you can run your own in seconds.
 
