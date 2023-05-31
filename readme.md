@@ -8,10 +8,11 @@ It's deployed with Terraform - all you need is AWS keys and you can run your own
 2. Do `cargo build` to generate the Terraform stack
 3. Move to `deploy/tf`
 4. Create `input.json` like
-   ```{
-    "aws_region": "us-east-1",
-    "aws_public_key": "AKIA...",
-    "aws_secret_key": "..."
+   ```json
+   {
+     "aws_region": "us-east-1",
+     "aws_public_key": "AKIA...",
+     "aws_secret_key": "..."
    }
    ```
 5. Run `terraform init`
