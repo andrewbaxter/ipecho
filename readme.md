@@ -1,6 +1,6 @@
 This is a simple service for AWS Lambda for echoing your IP address back to you (a la <https://whatismyip.com>).
 
-It's deployed with Terraform - all you need is AWS keys and you can run your own in seconds.
+It's deployed with Terraform - all you need is AWS keys and you can run your own in seconds, no code modifications needed.
 
 # Deploy
 
@@ -26,4 +26,4 @@ Just do an HTTP GET to the URL, like `curl https://MYURL`.
 
 The response body will be your IP address.
 
-If you get an IPv6 address back, it means you made the request over IPv6. The function URL gets both IPv4 A and IPv6 AAAA DNS records -- you probably requested the IPv6 address for the website (Browsers and the like using the "happy eyeballs" approach will try both and use the first connection that worked).
+If you get an IPv6 address back, it means you made the request over IPv6. AWS creates both IPv4 A and IPv6 AAAA DNS records for the function &mdash; you probably requested the IPv6 address for the website (browsers and the like using the "happy eyeballs" approach will try both and use the first connection that worked). With curl you can force IPv4 with `-4` or IPv6 with `-6`.
